@@ -19,12 +19,10 @@ a{color:var(--gold-light)}
 .wrap{width:100%;max-width:760px;margin:0 auto;padding:0 20px}
 .wrap.wide{max-width:980px}
 
-/* diamond pattern like the cover */
+/* smooth blue gradient (no pattern) */
 .pattern{
   background:
-    repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 14px,transparent 14px 28px),
-    repeating-linear-gradient(-45deg,rgba(255,255,255,.035) 0 14px,transparent 14px 28px),
-    radial-gradient(ellipse at 50% 0%,#23268A 0%,var(--navy) 55%,var(--navy-deep) 100%);
+    radial-gradient(ellipse at 50% 0%,#2A2EA0 0%,var(--navy) 55%,var(--navy-deep) 100%);
 }
 section{padding:56px 0}
 .alt{background:var(--navy)}
