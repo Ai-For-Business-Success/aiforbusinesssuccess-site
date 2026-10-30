@@ -126,11 +126,12 @@
         <p class="lead" style="margin-bottom:8px">A comprehensive guide to boost productivity, enhance decisions, retain customers, and drive revenue.</p>
         <p>It comes with <strong style="color:#F2DC7A">The AI Implementation Blueprint</strong>, a working toolkit that turns the ideas into action:</p>
         <div class="chips">
-          <div class="chip">13-phase roadmap</div>
-          <div class="chip">40 ready-made tasks</div>
-          <div class="chip">Live dashboard</div>
-          <div class="chip">Team tools</div>
+          <button type="button" class="chip" data-img="/assets/img/blueprint-roadmap.jpg" data-title="13-phase roadmap" data-alt="The 13-phase roadmap tab of The AI Implementation Blueprint, showing each phase with its objective, deliverables, owner, dates and status">13-phase roadmap <span class="plus" aria-hidden="true">+</span></button>
+          <button type="button" class="chip" data-img="/assets/img/blueprint-tasks.jpg" data-title="40 ready-made tasks" data-alt="The tasks tab of The AI Implementation Blueprint, showing the first 22 of 40 tasks with definition of done, owner, sprint, dates, priority and status">40 ready-made tasks <span class="plus" aria-hidden="true">+</span></button>
+          <button type="button" class="chip" data-img="/assets/img/blueprint-dashboard.jpg" data-title="Live dashboard" data-alt="The dashboard tab of The AI Implementation Blueprint, showing overall progress, alerts, phase status, task status and team workload charts">Live dashboard <span class="plus" aria-hidden="true">+</span></button>
+          <button type="button" class="chip" data-img="/assets/img/blueprint-timeline.jpg" data-title="Team tools" data-alt="The timeline tab of The AI Implementation Blueprint, a Gantt view of every phase and task colored by status">Team tools <span class="plus" aria-hidden="true">+</span></button>
         </div>
+        <p class="small" style="margin:-8px 0 20px">Tap any item to preview it.</p>
         <a class="btn block" data-link="bookUrl" href="https://www.amazon.com/dp/B0GKYWGB4P" target="_blank" rel="noopener">Get the book on Amazon</a>
       </div>
     </div>
@@ -143,6 +144,37 @@
     <p><a href="/privacy/">Privacy policy</a></p>
   </div>
 </footer>
+
+<!-- Blueprint preview popup -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="modal-box">
+    <button type="button" class="modal-x" id="modal-x" aria-label="Close preview">&times;</button>
+    <h3 id="modal-title"></h3>
+    <p class="modal-cap">Shown with sample data. <a id="modal-full" href="#" target="_blank" rel="noopener">Open full size</a></p>
+    <img id="modal-img" src="" alt="">
+  </div>
+</div>
+<script>
+(function(){
+  var m=document.getElementById("modal"), img=document.getElementById("modal-img"),
+      ttl=document.getElementById("modal-title"), full=document.getElementById("modal-full"),
+      x=document.getElementById("modal-x"), last=null;
+  function open(b){
+    last=b; ttl.textContent=b.getAttribute("data-title");
+    img.alt=b.getAttribute("data-alt"); img.src=b.getAttribute("data-img");
+    full.href=b.getAttribute("data-img");
+    m.hidden=false; m.classList.add("open"); document.body.style.overflow="hidden"; x.focus();
+  }
+  function close(){
+    m.classList.remove("open"); m.hidden=true; document.body.style.overflow="";
+    if(last) last.focus();
+  }
+  document.querySelectorAll("button.chip").forEach(function(b){ b.addEventListener("click",function(){open(b);}); });
+  x.addEventListener("click",close);
+  m.addEventListener("click",function(e){ if(e.target===m) close(); });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !m.hidden) close(); });
+})();
+</script>
 
 <!-- Scroll hint: floats at the bottom of the screen until the visitor starts scrolling -->
 <a id="scrollhint" href="#preview" style="position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:50;background:#D4A93C;color:#10114F;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.45);transition:opacity .25s;white-space:nowrap">See what's inside &darr;</a>
