@@ -44,8 +44,7 @@
 
       <p class="consent">By signing up, you agree to receive the white paper and occasional emails from Michael A. Sarro about using AI in business. You can unsubscribe at any time. Read our <a href="/privacy/">privacy policy</a>.</p>
     </div>
-    <p class="trust">Free. No spam. Written for owners, executives, and managers.</p>
-  </div>
+    <p class="trust">Free. No spam. Written for owners, executives, and managers.</p>  </div>
 </header>
 
 <!-- 3. PREVIEW -->
@@ -75,7 +74,7 @@
       <li><strong>Small businesses can win here too.</strong> I built and run a full software product as a one-person company with AI as my engineering partner. Section 06 shows how.</li>
     </ol>
     <p class="note">That is the summary. The full paper has the detail, the diagrams, and the tools.</p>
-    <p style="margin-top:22px"><a class="btn block" href="#get-it">Send me the white paper</a></p>
+    <p style="margin-top:22px"><a class="btn block" href="#get-it">Get the white paper now</a></p>
   </div>
 </section>
 
@@ -144,5 +143,15 @@
     <p><a href="/privacy/">Privacy policy</a></p>
   </div>
 </footer>
+
+<!-- Scroll hint: floats at the bottom of the screen until the visitor starts scrolling -->
+<a id="scrollhint" href="#preview" style="position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:50;background:#D4A93C;color:#10114F;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.45);transition:opacity .25s;white-space:nowrap">See what's inside &darr;</a>
+<script>
+(function(){
+  var h=document.getElementById("scrollhint"); if(!h) return;
+  function u(){ var s=window.scrollY>60; h.style.opacity=s?"0":"1"; h.style.pointerEvents=s?"none":"auto"; }
+  window.addEventListener("scroll",u,{passive:true}); u();
+})();
+</script>
 </body>
 </html>

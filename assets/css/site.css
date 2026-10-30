@@ -32,21 +32,21 @@ h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.1;margin:0 0 1
 h1{font-size:clamp(34px,9vw,60px)}
 h2{font-size:clamp(28px,7vw,40px)}
 h3{font-size:20px}
-.rule{width:64px;height:3px;background:var(--gold);border:0;margin:0 0 22px}
-.lead{font-size:18px;color:var(--muted);margin:0 0 28px}
+.rule{width:64px;height:3px;background:var(--gold);border:0;margin:0 0 16px}
+.lead{font-size:18px;color:var(--muted);margin:0 0 18px}
 
 /* hero */
-.hero{padding:36px 0 56px;text-align:left}
-.topbar{display:flex;align-items:center;justify-content:space-between;padding:0 0 28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);font-weight:600}
+.hero{padding:22px 0 28px;text-align:left}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:0 0 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);font-weight:600}
 .topbar span:last-child{color:var(--muted);font-weight:500}
-.hero h1 .big{display:block;font-size:clamp(56px,17vw,110px);line-height:.95;margin-bottom:10px}
-.hero h1 .rest{display:block;font-size:clamp(24px,6.4vw,38px);line-height:1.15;color:var(--white)}
+.hero h1 .big{display:block;font-size:clamp(48px,13vw,84px);line-height:.95;margin-bottom:6px}
+.hero h1 .rest{display:block;font-size:clamp(22px,5.6vw,32px);line-height:1.15;color:var(--white)}
 
 /* form card */
-.form-card{background:var(--white);color:var(--ink);border-radius:16px;padding:24px 20px;margin-top:8px;box-shadow:0 14px 40px rgba(0,0,0,.45);border:5px solid var(--gold)}
+.form-card{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px;margin-top:4px;box-shadow:0 14px 40px rgba(0,0,0,.45);border:5px solid var(--gold)}
 .form-card h2{color:var(--navy);font-size:24px;margin-bottom:6px}
 .form-card p{margin:0 0 14px;color:#4A4C6C;font-size:15px}
-.form-embed{min-height:150px}
+.form-embed{min-height:0}
 .consent{font-size:12.5px;line-height:1.5;color:#5A5C78;margin:14px 0 0}
 .consent a{color:var(--navy);font-weight:600}
 .fallback{font-size:13px;margin:12px 0 0;color:#5A5C78}
@@ -116,5 +116,5 @@ footer a{color:var(--gold-light)}
   .book{flex-direction:row;gap:48px;align-items:center}
   .book img{width:250px}
   .chips{grid-template-columns:1fr 1fr}
-  .form-card{padding:30px 32px}
+  .form-card{padding:20px 32px}
 }
