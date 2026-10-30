@@ -43,7 +43,7 @@ h3{font-size:20px}
 .hero h1 .rest{display:block;font-size:clamp(24px,6.4vw,38px);line-height:1.15;color:var(--white)}
 
 /* form card */
-.form-card{background:var(--white);color:var(--ink);border-radius:16px;padding:24px 20px;margin-top:8px;box-shadow:0 14px 40px rgba(0,0,0,.45);border-top:5px solid var(--gold)}
+.form-card{background:var(--white);color:var(--ink);border-radius:16px;padding:24px 20px;margin-top:8px;box-shadow:0 14px 40px rgba(0,0,0,.45);border:3px solid var(--gold)}
 .form-card h2{color:var(--navy);font-size:24px;margin-bottom:6px}
 .form-card p{margin:0 0 14px;color:#4A4C6C;font-size:15px}
 .form-embed{min-height:150px}
